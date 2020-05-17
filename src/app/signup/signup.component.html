@@ -1,0 +1,35 @@
+<br>
+<br>
+
+<form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width">
+        <mat-label>username</mat-label>
+        <input matInput required type="text" placeholder="Ex. GurpreetMatta" formControlName="username" [(ngModel)]="signup.username">
+        <mat-error>
+            username is required.
+        </mat-error>
+    </mat-form-field>   
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>name</mat-label>
+        <input matInput type="text" placeholder="Ex. Gurpreet Matta" formControlName="name" [(ngModel)]="signup.name">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>email</mat-label>
+        <input matInput required type="email" placeholder="Ex. username@gmail.com" formControlName="email" [(ngModel)]="signup.email">
+        <mat-error>
+            email is required.
+        </mat-error>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>password</mat-label>
+        <input matInput required type="password" placeholder="Ex. ****" formControlName="password" [(ngModel)]="signup.password">
+        <mat-error>
+            password is required.
+        </mat-error>
+    </mat-form-field>
+    <br><br>
+    <button mat-raised-button color="primary">Submit</button>
+</form>

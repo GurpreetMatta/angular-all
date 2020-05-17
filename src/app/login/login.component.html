@@ -1,0 +1,26 @@
+<br>
+<br>
+<form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-error *ngIf="isLogin">
+        invalid username/or password.
+    </mat-error>
+    <mat-form-field class="example-full-width">
+        <mat-label>username</mat-label>
+        <input matInput formControlName="username" id="username" type=" text " placeholder="Ex. GurpreetMatta " [(ngModel)]="login.username " required>
+        <mat-error>
+            username is required.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-form-field class="example-full-width ">
+        <mat-label>password</mat-label>
+        <input matInput formControlName="password" id="password" type="password" placeholder="Ex. ****** " [(ngModel)]="login.password " required>
+        <mat-error>
+            password is required.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button color="primary">Submit</button>
+</form>

@@ -1,0 +1,19 @@
+<back></back>
+<br>
+<br>
+<form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width">
+        <mat-label>title</mat-label>
+        <input matInput formControlName="title" id="title" type=" text " placeholder="Ex. Java " [(ngModel)]="posts.title">
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-form-field class="example-full-width ">
+        <mat-label>description</mat-label>
+        <textarea matInput formControlName="description" cdkTextareaAutosize id="description" placeholder="description" [(ngModel)]="posts.description ">
+        </textarea>
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button color="primary">Submit</button>
+</form>
